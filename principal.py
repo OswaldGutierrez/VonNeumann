@@ -38,7 +38,7 @@ intruccionData = {
     "0100" : "&",
     "0101" : "|",
     "0110" : "M",
-    "0111" : "F",
+    "0111" : "...",
 }
 
 # Crear una instancia del contador binario
@@ -95,7 +95,7 @@ def siguientePaso():
         decodificador.config(text=signoDecodificador)
         
         # Verificar si el valor del decodificador es 'F' y deshabilitar el botón si es así
-        if signoDecodificador == "F":
+        if signoDecodificador == "...":
             next_button.config(state=tk.DISABLED)
             return  # Detener la ejecución
 
@@ -185,17 +185,17 @@ tk.Label(frame_control, text="Unidad de Control").pack()
 
 # Decodificador
 tk.Label(frame_control, text="Decodificador").pack()
-decodificador = tk.Label(frame_control, bg="white", width=20, height=2, anchor="center")
+decodificador = tk.Label(frame_control, bg="white", width=20, height=2, anchor="center", font=("Helvetica", 16))
 decodificador.pack()
 
 # Contador de Programa
 tk.Label(frame_control, text="Contador de Programa").pack()
-contPrograma = tk.Label(frame_control, bg="white", width=20, height=2, anchor="center")
+contPrograma = tk.Label(frame_control, bg="white", width=20, height=2, anchor="center", font=("Helvetica", 16))
 contPrograma.pack()
 
 # Instrucciones
 tk.Label(frame_control, text="Instrucciones").pack()
-rInstrucciones = tk.Label(frame_control, bg="white", width=20, height=4, anchor="center")
+rInstrucciones = tk.Label(frame_control, bg="white", width=20, height=4, anchor="center", font=("Helvetica", 16))
 rInstrucciones.pack()
 
 # Unidad Aritmético-Lógica (parte superior derecha)
@@ -205,12 +205,12 @@ tk.Label(frame_alu, text="Unidad Aritmético-Lógica").pack()
 
 # Acumulador
 tk.Label(frame_alu, text="Acumulador").pack()
-acumulador = tk.Label(frame_alu, bg="white", width=20, height=2, anchor="center")
+acumulador = tk.Label(frame_alu, bg="white", width=20, height=2, anchor="center", font=("Helvetica", 16))
 acumulador.pack()
 
 # Registro de Entrada
 tk.Label(frame_alu, text="Registro de Entrada").pack()
-rEntrada = tk.Label(frame_alu, bg="white", width=20, height=2, anchor="center")
+rEntrada = tk.Label(frame_alu, bg="white", width=20, height=2, anchor="center", font=("Helvetica", 16))
 rEntrada.pack()
 
 # Memoria (parte inferior)
@@ -222,7 +222,7 @@ tk.Label(frame_memory, text="Memoria").pack()
 frame_address = tk.Frame(frame_memory, bd=1, relief="sunken", padx=10, pady=10)
 frame_address.pack(side=tk.LEFT, fill=tk.Y)
 tk.Label(frame_address, text="Registro de Direcciones").pack()
-rDirecciones = tk.Label(frame_address, bg="white", width=20, height=2, anchor="center")
+rDirecciones = tk.Label(frame_address, bg="white", width=20, height=2, anchor="center", font=("Helvetica", 16))
 rDirecciones.pack()
 
 # Tabla de Memoria (parte inferior)
@@ -233,7 +233,7 @@ memoryTable.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 frame_data = tk.Frame(frame_memory, bd=1, relief="sunken", padx=10, pady=10)
 frame_data.pack(side=tk.RIGHT, fill=tk.Y)
 tk.Label(frame_data, text="Registro de Datos").pack()
-rDatos = tk.Label(frame_data, bg="white", width=20, height=2, anchor="center")
+rDatos = tk.Label(frame_data, bg="white", width=20, height=2, anchor="center", font=("Helvetica", 16))
 rDatos.pack()
 
 # Inicializar la tabla de memoria
